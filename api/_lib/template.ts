@@ -51,7 +51,8 @@ function getCss(theme: string, fontSize: string) {
     body {
         background: ${background};
         background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
-        background-size: 100px 100px;
+        background: linear-gradient(to top, #a1ffce, #faffd1);
+        background-size: cover;
         height: 100vh;
         display: flex;
         text-align: center;
@@ -89,7 +90,7 @@ function getCss(theme: string, fontSize: string) {
     }
 
     .spacer {
-        margin: 150px;
+        margin: 120px;
     }
 
     .emoji {
@@ -104,7 +105,7 @@ function getCss(theme: string, fontSize: string) {
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};
-        line-height: 1.65;
+        line-height: 1.5;
     }`;
 }
 
@@ -139,7 +140,7 @@ export function getHtml(parsedReq: ParsedRequest) {
 </html>`;
 }
 
-function getImage(src: string, width = "auto", height = "64") {
+function getImage(src: string, width = "auto", height = "80") {
   return `<img
         class="logo"
         alt="Generated Image"
