@@ -56,7 +56,7 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 function getDefaultImages(images: string[], theme: Theme): string[] {
   const defaultImage =
     theme === "light"
-      ? "https://remotejobs.store/RemoteJobsText.svg"
+      ? "https://remotejobs.store/logo_full.svg"
       : "https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-white.svg";
 
   if (!images || !images[0]) {
